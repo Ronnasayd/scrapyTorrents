@@ -32,10 +32,19 @@ export const FilmDetails = styled.div`
   border: 3px solid #5a4799;
   border-radius: 4px;
   margin-right: 30px;
+  animation: detail 1s ease-in;
   @media only screen and (max-width: 600px) {
     flex-direction: column;
     margin-right: 0px;
     border: 0;
+  }
+  @keyframes detail {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 `;
 export const FilmDetailsContent = styled.div`
@@ -60,6 +69,7 @@ export const FilmTrailer = styled.iframe`
   width: 500px;
   height: 300px;
   border: 0;
+
   @media only screen and (max-width: 600px) {
     width: 400px;
   }
