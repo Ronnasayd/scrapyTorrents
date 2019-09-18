@@ -27,7 +27,7 @@ export default function Main() {
         / ((documentElement.scrollHeight || body.scrollHeight)
           - documentElement.clientHeight))
       * 100;
-    if (percent >= 80) {
+    if (percent >= 85) {
       setPage(page + 1);
     }
   };

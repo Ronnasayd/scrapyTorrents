@@ -16,6 +16,7 @@ export const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
   @media only screen and (max-width: 600px) {
     flex-basis: 50%;
   }
@@ -51,8 +52,22 @@ export const ItemTituloText = styled.div`
 export const ItemImage = styled.img`
   width: 100%;
   height: 230px;
+  animation: blured 700ms ease-out;
+  animation-fill-mode: forwards;
+
   @media only screen and (max-width: 600px) {
     height: 100%;
+  }
+
+  @keyframes blured {
+    0% {
+      filter: blur(8px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
   }
 `;
 
@@ -60,24 +75,44 @@ export const ItemIMDB = styled.div`
   position: absolute;
   font-size: 12px;
   bottom: 65px;
-  right: 5px;
   background: #5a4799;
   color: #fff;
   padding: 10px;
   border-radius: 4px;
   border: 0.5px solid rgba(255, 255, 255, 0.5);
   font-weight: bold;
+  animation: moveImdb 500ms ease-out;
+  animation-fill-mode: forwards;
+
+  @keyframes moveImdb {
+    0% {
+      right: -50px;
+    }
+    100% {
+      right: 5px;
+    }
+  }
 `;
 
 export const ItemAno = styled.div`
   position: absolute;
   font-size: 12px;
   top: 5px;
-  left: 5px;
   background: #5a4799;
   color: #fff;
   padding: 10px;
   border-radius: 4px;
   border: 0.5px solid rgba(255, 255, 255, 0.5);
   font-weight: bold;
+  animation: moveAno 500ms ease-out;
+  animation-fill-mode: forwards;
+
+  @keyframes moveAno {
+    0% {
+      transform: translateX(-50px);
+    }
+    100% {
+      transform: translateX(5px);
+    }
+  }
 `;
