@@ -1,8 +1,8 @@
 /* eslint-disable no-multi-spaces */
 /* eslint-disable no-underscore-dangle */
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import InfiniteScroll from "react-infinite-scroll-component";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 import {
   FlatList,
@@ -11,11 +11,11 @@ import {
   ItemTituloContainer,
   ItemIMDB,
   ItemTituloText,
-  ItemAno
-} from "./styles";
+  ItemAno,
+} from './styles';
 
-import api from "../../services/api";
-import defaultImage from "../../assets/default.jpg";
+import api from '../../services/api';
+import defaultImage from '../../assets/default.jpg';
 
 export default function Main() {
   const [listOfMovies, setListOfMovies] = useState([]);
@@ -29,7 +29,7 @@ export default function Main() {
   async function getData() {
     setPage(page + 1);
     const {
-      data: { docs, pages }
+      data: { docs, pages },
     } = await api.get(`/filmes/${page}`);
     setListOfMovies([...listOfMovies, ...docs]);
     if (page >= pages) {
@@ -47,7 +47,7 @@ export default function Main() {
       hasMore={hasMorePages}
     >
       <FlatList>
-        {listOfMovies.map(item => (
+        {listOfMovies.map((item) => (
           <ItemContainer key={item._id}>
             <Link to={`/show/${item._id}`}>
               <ItemImage src={item.image_url} onError={handleSetDefaultImage} />
