@@ -1,11 +1,11 @@
 const { Router } = require('express')
-const filmesController = require('./controllers/filmesController')
+const FilmesController = require('./controllers/FilmesController')
 
 const router = Router()
 
-router.get('/filmes/:page', filmesController.index)
-router.get('/generos', filmesController.generos)
-router.get('/filme/:id', filmesController.detail)
-router.get('/search/:search', filmesController.search)
+router.get('/filmes/:page', FilmesController.Index)
+router.get('/generos', FilmesController.Generos)
+router.get('/filme/:id', FilmesController.Detail)
+router.get('/search/:search', FilmesController.Search)
 
 module.exports = router

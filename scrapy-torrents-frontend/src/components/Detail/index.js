@@ -21,6 +21,8 @@ import {
   MagnetCard,
 } from './styles';
 
+import defaultImage from '../../assets/default.jpg';
+
 export default function Detail({ match }) {
   const [filme, setFilme] = useState('');
 
@@ -34,13 +36,17 @@ export default function Detail({ match }) {
     // eslint-disable-next-line
   }, []);
 
+  function handleSetDefaultImage(e) {
+    e.target.src = defaultImage;
+  }
+
   return (
     <>
       <Menu />
       <Container>
         <FilmCard>
           <FilmDetails>
-            <FilmPoster src={filme.image_url} />
+            <FilmPoster src={filme.image_url} onError={handleSetDefaultImage} />
             <FilmDetailsContent>
               <FilmTitulo>{filme.titulo}</FilmTitulo>
               <FilmDetailItem>
