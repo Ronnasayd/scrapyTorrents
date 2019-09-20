@@ -23,10 +23,11 @@ import {
 
 export default function Detail({ match }) {
   const [filme, setFilme] = useState('');
+
   useEffect(() => {
+    window.scrollTo(0, 0);
     async function getData() {
       const { data } = await api.get(`/filme/${match.params.id}`);
-      console.log(data);
       setFilme(data);
     }
     getData();

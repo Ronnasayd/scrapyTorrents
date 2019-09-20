@@ -116,3 +116,22 @@ export const ItemAno = styled.div`
     }
   }
 `;
+
+export const Spinner = styled.div`
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 8px solid rgb(209, 209, 209);
+  border-top: 8px solid #5a4799;
+  margin: 0 auto;
+  animation: spin 2s linear infinite;
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+`;

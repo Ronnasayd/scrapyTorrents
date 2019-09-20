@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -77,4 +77,14 @@ export const SearchButton = styled.button`
 export const SearchIcon = styled.span`
   font-size: 18px;
   font-weight: bold;
+`;
+
+export const Back = styled.span`
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 2px solid #fff;
+  }
 `;
