@@ -24,7 +24,7 @@ const FilmeSchema = new mongoose.Schema({
     type: 'String'
   },
   ano_lancamento: {
-    type: 'Number'
+    type: 'String'
   },
   genero: {
     type: ['String']
@@ -33,13 +33,13 @@ const FilmeSchema = new mongoose.Schema({
     type: 'String'
   },
   qualidade_audio: {
-    type: 'Number'
+    type: 'String'
   },
   qualidade_video: {
-    type: 'Number'
+    type: 'String'
   },
   imdb: {
-    type: 'Number'
+    type: 'String'
   },
   tamanho: {
     type: ['String']

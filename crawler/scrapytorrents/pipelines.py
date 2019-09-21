@@ -11,6 +11,7 @@ from scrapy.exceptions import DropItem
 from decouple import config
 from scrapytorrents.models import Filme
 from mongoengine import *
+import datetime
 
 
 class ScrapytorrentsPipeline(object):
@@ -33,5 +34,8 @@ class ScrapytorrentsPipeline(object):
             filme.save()
             self.data.append(dict(item))
         except Exception as err:
-            spider.logger.error(err)
+            [filme] = Filme.objects(titulo_slug=item['titulo_slug'])
+            filme.updated_at = datetime.datetime.utcnow()
+            filme.save()
+            # spider.logger.error(err)
         return item

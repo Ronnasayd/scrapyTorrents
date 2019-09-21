@@ -85,8 +85,8 @@ export default function Main() {
                     : item.titulo}
                 </ItemTituloText>
               </ItemTituloContainer>
-              <ItemIMDB>{parseFloat(item.imdb).toFixed(1)}</ItemIMDB>
-              <ItemAno>{item.ano_lancamento}</ItemAno>
+              <ItemIMDB>{item.imdb || 'N.D'}</ItemIMDB>
+              <ItemAno>{item.ano_lancamento || '0000'}</ItemAno>
             </Link>
           </ItemContainer>
         ))}
