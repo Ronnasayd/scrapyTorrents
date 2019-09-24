@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -32,6 +32,8 @@ export const LinksContainer = styled.div`
   }
   @media only screen and (max-width: 600px) {
     flex-direction: column;
+    width: 100%;
+    min-width: 200px;
   }
 `;
 export const Tipo = styled.span`
@@ -48,6 +50,9 @@ export const Tipo = styled.span`
 export const SearchContainer = styled.div`
   display: flex;
   flex-direction: row;
+  @media only screen and (max-width: 600px) {
+    width: 98%;
+  }
 `;
 export const SearchInput = styled.input`
   height: 36px;

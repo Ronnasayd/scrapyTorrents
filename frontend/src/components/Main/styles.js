@@ -8,6 +8,7 @@ export const FlatList = styled.div`
   cursor: pointer;
   @media only screen and (max-width: 600px) {
     flex-direction: column;
+    margin-top: 176px;
   }
 `;
 
@@ -56,7 +57,7 @@ export const ItemImage = styled.img`
   animation-fill-mode: forwards;
 
   @media only screen and (max-width: 600px) {
-    height: 100%;
+    height: 500px;
   }
 
   @keyframes blured {
@@ -83,6 +84,10 @@ export const ItemIMDB = styled.div`
   font-weight: bold;
   animation: moveImdb 500ms ease-out;
   animation-fill-mode: forwards;
+  @media only screen and (max-width: 600px) {
+    padding: 20px;
+    font-size: 20px;
+  }
 
   @keyframes moveImdb {
     0% {
@@ -106,7 +111,10 @@ export const ItemAno = styled.div`
   font-weight: bold;
   animation: moveAno 500ms ease-out;
   animation-fill-mode: forwards;
-
+  @media only screen and (max-width: 600px) {
+    padding: 20px;
+    font-size: 20px;
+  }
   @keyframes moveAno {
     0% {
       transform: translateX(-50px);

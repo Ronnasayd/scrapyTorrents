@@ -52,7 +52,6 @@ export default function Menu() {
         <a href="/">
           <Logo>ScrapyTorrents</Logo>
         </a>
-
         <Tipo
           onClick={async () => {
             await dispatch({ type: 'CHANGE_TIPO', tipo: 'filme' });

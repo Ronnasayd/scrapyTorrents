@@ -6,7 +6,6 @@ export const Container = styled.section`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  max-width: 100vw;
 `;
 
 export const FilmCard = styled.div`
@@ -21,6 +20,8 @@ export const FilmCard = styled.div`
     margin-top: 200px;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    min-width: 200px;
   }
 `;
 
@@ -37,6 +38,8 @@ export const FilmDetails = styled.div`
     flex-direction: column;
     margin-right: 0px;
     border: 0;
+    width: 100%;
+    min-width: 200px;
   }
   @keyframes detail {
     0% {
@@ -71,7 +74,8 @@ export const FilmTrailer = styled.iframe`
   border: 0;
 
   @media only screen and (max-width: 600px) {
-    width: 400px;
+    width: 100%;
+    min-width: 200px;
   }
 `;
 
@@ -96,7 +100,8 @@ export const MagnetHeader = styled.div`
   width: 800px;
   text-align: center;
   @media only screen and (max-width: 600px) {
-    width: 400px;
+    width: 100%;
+    min-width: 200px;
   }
 `;
 export const MagnetBody = styled.div`
@@ -104,7 +109,8 @@ export const MagnetBody = styled.div`
   width: 800px;
   margin-bottom: 50px;
   @media only screen and (max-width: 600px) {
-    width: 400px;
+    width: 100%;
+    min-width: 200px;
   }
 `;
 export const MagnetCard = styled.div`

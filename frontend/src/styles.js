@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -12,11 +12,10 @@ const GlobalStyle = createGlobalStyle`
     }
     body,#root{
         height:100%;
-        box-sizing:border-box;
     }
 
   body{
-    background:${props => props.backgroundColor || "#000"};
+    background:${(props) => props.backgroundColor || '#000'};
     font-family: 'Roboto', sans-serif;
   }
 `;
